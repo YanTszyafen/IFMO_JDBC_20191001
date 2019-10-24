@@ -1,8 +1,5 @@
 package com.efimchick.ifmo.web.jdbc;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
 
 /**
  * Implement sql queries like described
@@ -26,7 +23,7 @@ public class SqlQueries {
 
     //Select employees assigned to a department and corresponding department name
     //language=HSQLDB
-    String select05 = "SELECT EMPLOYEE.LASTNAME, EMPLOYEE.SALARY, DEPARTMENT.NAME from EMPLOYEE, DEPARTMENT where EMPLOYEE.DEPARTMENT = DEPARTMENT.ID";
+    String select05 = "SELECT EMPLOYEE.LASTNAME, EMPLOYEE.SALARY, DEPARTMENT.NAME from EMPLOYEE INNER JOIN DEPARTMENT ON EMPLOYEE.DEPARTMENT = DEPARTMENT.ID";
 
     //Select all employees and corresponding department name if there is one.
     //Name column containing name of the department "depname".
@@ -35,7 +32,7 @@ public class SqlQueries {
 
     //Select total salary pf all employees. Name it "total".
     //language=HSQLDB
-    String select07 = "SELECT SUM(SALARY) AS total from EMPLOYEE";
+    String select07 = "SELECT SUM(EMPLOYEE.SALARY) AS total from EMPLOYEE";
 
     //Select all departments and amount of employees assigned per department
     //Name column containing name of the department "depname".
