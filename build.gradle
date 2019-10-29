@@ -24,6 +24,9 @@ dependencies {
 
     compile 'com.google.guava:guava:23.0'
     compile group: 'org.hsqldb', name: 'hsqldb', version: '2.5.0'
+    // https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
+    compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
