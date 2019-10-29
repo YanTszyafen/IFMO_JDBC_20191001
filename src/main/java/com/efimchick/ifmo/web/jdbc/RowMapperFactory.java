@@ -22,7 +22,6 @@ public class RowMapperFactory {
                 ResultSet rs = statement.executeQuery("select * from EMPLOYEE")){
                 rs.next();
                 BigInteger id = new BigInteger(String.valueOf(resultSet.getInt("id")));
-                //fullName
                 String firstName = resultSet.getString("firstName");
                 String lastName = resultSet.getString("lastName");
                 String middleName = resultSet.getString("middleName");
