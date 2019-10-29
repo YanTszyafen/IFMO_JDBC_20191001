@@ -30,6 +30,7 @@ public class RowMapperFactory {
                 LocalDate hired = LocalDate.parse(String.valueOf(resultSet.getDate("hiredate")));
                 BigDecimal salary = new BigDecimal(String.valueOf(resultSet.getBigDecimal("salary")));
                 Employee employee = new Employee(id, fullName, position, hired, salary);
+
                 return employee;
             }catch (SQLException e){
                 return null;
